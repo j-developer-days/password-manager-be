@@ -1,0 +1,11 @@
+t_group_accounts
+    id
+    group_name
+
+t_accounts
+    id
+    account_name
+    account_url
+    account_password
+    creation_datetime
+    group_id(t_group_accounts.id)
