@@ -4,6 +4,10 @@ echo '\t11 - create'
 echo '\t12 - get by id'
 echo '\t13 - get all'
 echo '\t14 - check throw Exception'
+echo 'II - Group Account endpoints:'
+echo '\t21 - create'
+echo '\t22 - get by id'
+echo '\t23 - get all'
 echo '-----------------------------'
 echo 'c - clear screen'
 echo 'e - EXIT'
@@ -29,6 +33,16 @@ case "$commandNumber" in
    fi
    curl --http2-prior-knowledge -i -X GET "${password_holder}test/check-exception?isThrowException=${isThrowException}"
    ;;
+  "21") echo "please write groupAccountName: "
+           read groupAccountName
+  curl --http2-prior-knowledge -i -X POST "${password_holder}group-account/${groupAccountName}"
+    ;;
+  "22") echo "please write groupAccountId: "
+           read groupAccountId
+  curl --http2-prior-knowledge -i -X GET "${password_holder}group-account/${groupAccountId}"
+    ;;
+  "23") curl --http2-prior-knowledge -i -X GET "${password_holder}group-account/"
+    ;;
    "c") clear
    ;;
    "e") exit 0

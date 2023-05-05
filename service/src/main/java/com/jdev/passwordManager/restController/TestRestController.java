@@ -1,4 +1,4 @@
-package com.jdev.passwordManager.restcontroller;
+package com.jdev.passwordManager.restController;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
