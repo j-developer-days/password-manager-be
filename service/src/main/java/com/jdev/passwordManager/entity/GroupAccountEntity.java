@@ -8,7 +8,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
+@Builder(toBuilder = true)
 
 @Entity
 @Table(name = "t_group_accounts")
