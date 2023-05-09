@@ -2,6 +2,7 @@ package com.jdev.passwordManager.service;
 
 import com.jdev.passwordManager.entity.GroupAccountEntity;
 import com.jdev.passwordManager.repository.GroupAccountRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -11,21 +12,24 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 import java.util.Optional;
 
+import static com.jdev.passwordManager.GroupAccountHelper.GROUP_ACCOUNT_NAME;
+import static com.jdev.passwordManager.GroupAccountHelper.ID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class GroupAccountServiceTest {
-
-    private final static short ID = 1;
-    private final static String GROUP_ACCOUNT_NAME = "TestMockito";
 
     @InjectMocks
     private GroupAccountService groupAccountService;
     @Mock
     private GroupAccountRepository groupAccountRepository;
+
+    @AfterEach
+    private void mockitoAfterVerifyNoMoreInteractions() {
+        verifyNoMoreInteractions(groupAccountRepository);
+    }
 
     @Test
     void test_createGroupAccount() {
