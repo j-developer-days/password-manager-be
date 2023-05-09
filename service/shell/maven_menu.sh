@@ -1,6 +1,6 @@
 #!/bin/bash
 echo '1 - clean install'
-echo '11 - clean install with run unit tests'
+echo '11 - clean install with run unit and IT tests'
 echo '2 - dependency tree'
 echo '3 - sort pom'
 echo '4 - spring-boot run'
@@ -16,7 +16,7 @@ read commandNumber
 case "$commandNumber" in
    "1") sh maven_clean_install.sh
    ;;
-   "11") clear && mvn --file ../pom.xml -U clean install -Dskip.UT.tests=false
+   "11") clear && mvn --file ../pom.xml -U clean install -Dskip.UT.tests=false -Dskip.IT.tests=false
    ;;
    "2") sh maven_dependencies_tree.sh
    ;;
