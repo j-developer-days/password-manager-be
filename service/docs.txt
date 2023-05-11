@@ -1,2 +1,5 @@
 spring boot starters
     https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#using.build-systems.starters
+
+spring boot properties
+    https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#application-properties

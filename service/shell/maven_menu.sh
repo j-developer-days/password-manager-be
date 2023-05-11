@@ -16,7 +16,9 @@ read commandNumber
 case "$commandNumber" in
    "1") sh maven_clean_install.sh
    ;;
-   "11") clear && mvn --file ../pom.xml -U clean install -Dskip.UT.tests=false -Dskip.IT.tests=false
+   "11")
+   clear && mvn --file ../pom.xml -U -Dskip.UT.tests=false clean install &&
+   mvn --file ../pom.xml -U -Dskip.IT.tests=false failsafe:integration-test
    ;;
    "2") sh maven_dependencies_tree.sh
    ;;
