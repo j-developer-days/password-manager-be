@@ -16,6 +16,7 @@
     <modules>
         <module>db</module>
         <module>service</module>
+        <module>real-it</module>
     </modules>
 
     <properties/>
