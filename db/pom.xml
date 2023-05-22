@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jdev</groupId>
@@ -25,31 +24,6 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>root-db</id>
-            <properties>
-                <db.password>root_54321_psql</db.password>
-                <db.url>jdbc:postgresql://localhost:5432/${db.name}</db.url>
-                <db.username>postgres</db.username>
-                <db.name>postgres</db.name>
-            </properties>
-        </profile>
-        <profile>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <id>password_manager_db</id>
-            <properties>
-                <db.password>753951$^0Ghf</db.password>
-                <db.url>jdbc:postgresql://localhost:5432/${db.name}</db.url>
-                <db.username>pm_db_admin</db.username>
-                <db.name>password_manager_db</db.name>
-            </properties>
-        </profile>
-
-    </profiles>
-
     <build>
         <finalName>password-manager-be-db</finalName>
         <resources>
@@ -71,5 +45,30 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>root-db</id>
+            <properties>
+                <db.name>postgres</db.name>
+                <db.password>root_54321_psql</db.password>
+                <db.url>jdbc:postgresql://localhost:5432/${db.name}</db.url>
+                <db.username>postgres</db.username>
+            </properties>
+        </profile>
+        <profile>
+            <id>password_manager_db</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <db.name>password_manager_db</db.name>
+                <db.password>753951$^0Ghf</db.password>
+                <db.url>jdbc:postgresql://localhost:5432/${db.name}</db.url>
+                <db.username>pm_db_admin</db.username>
+            </properties>
+        </profile>
+
+    </profiles>
 
 </project>

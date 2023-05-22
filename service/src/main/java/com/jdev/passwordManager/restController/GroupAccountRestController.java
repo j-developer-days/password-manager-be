@@ -37,6 +37,7 @@ public class GroupAccountRestController {
         }
     }
 
+    @CrossOrigin(origins = {"http://localhost:4201"})
     @GetMapping("/")
     public ResponseEntity<List<String>> getAllGroupAccount() {
         log.info("call get all group account endpoint");
