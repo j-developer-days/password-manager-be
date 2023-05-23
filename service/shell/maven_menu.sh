@@ -12,7 +12,11 @@ echo '----------------------------------------------------------'
 echo 'c - Clear screen'
 echo 'e - EXIT'
 
-read commandNumber
+if [ -z $1 ]; then
+  read commandNumber
+else
+  commandNumber=$1
+fi
 
 case "$commandNumber" in
    "1") sh maven_clean_install.sh
