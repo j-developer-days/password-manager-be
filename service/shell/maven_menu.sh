@@ -6,6 +6,7 @@ echo '3 - sort pom'
 echo '4 - spring-boot run'
 echo '5 - spring-boot build docker image'
 echo '6 - clean install AND spring boot run'
+echo '61 - clean install AND spring boot run as DEBUG'
 echo '7 - clean install AND spring boot build image AND run as a docker'
 echo '----------------------------------------------------------'
 echo 'c - Clear screen'
@@ -29,6 +30,9 @@ case "$commandNumber" in
    "5") sh maven_spring-boot-build-image.sh
    ;;
    "6") sh -e maven_clean_install_and_spring-boot-run.sh
+   ;;
+   "61") sh -e maven_clean_install.sh
+  java -agentlib:jdwp=transport=dt_socket,server=y,address=5009 -jar ../target/password-manager-be-service.jar
    ;;
    "7") sh maven_clean_install_and_spring-boot-build-image_and_run_as_a_docker.sh
    ;;
