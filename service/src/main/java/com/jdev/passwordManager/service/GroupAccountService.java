@@ -32,8 +32,13 @@ public class GroupAccountService {
     }
 
     @Transactional(readOnly = true)
-    public List<String> getAllGroupAccounts() {
+    public List<String> getGroupAccounts() {
         return groupAccountRepository.findAll().stream().map(GroupAccountEntity::getGroupName).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public Optional<GroupAccountEntity> getGroupAccountByName(String groupName) {
+        return groupAccountRepository.getGroupAccountEntityByName(groupName);
     }
 
 }

@@ -2,6 +2,7 @@ package com.jdev.passwordManager.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;
@@ -28,6 +29,7 @@ public class AccountEntity {
     @Column(name = "account_password")
     private String accountPassword;
 
+    @CreatedDate
     @Column(name = "creation_datetime")
     private ZonedDateTime creationZonedDateTime;
 

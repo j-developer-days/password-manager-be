@@ -71,26 +71,26 @@ class GroupAccountRestControllerTest {
 
     @Test
     void test_getAllGroupAccount_emptyResult() throws Exception {
-        when(groupAccountService.getAllGroupAccounts()).thenReturn(List.of());
+        when(groupAccountService.getGroupAccounts()).thenReturn(List.of());
 
         this.mockMvc.perform(MockMvcRequestBuilders.get("/group-account/").accept(MediaType.APPLICATION_JSON))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(CoreMatchers.equalTo("[]")));
 
-        verify(groupAccountService).getAllGroupAccounts();
+        verify(groupAccountService).getGroupAccounts();
     }
 
     @Test
     void test_getAllGroupAccount() throws Exception {
-        when(groupAccountService.getAllGroupAccounts()).thenReturn(List.of(GROUP_ACCOUNT_NAME));
+        when(groupAccountService.getGroupAccounts()).thenReturn(List.of(GROUP_ACCOUNT_NAME));
 
         this.mockMvc.perform(MockMvcRequestBuilders.get("/group-account/").accept(MediaType.APPLICATION_JSON))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(CoreMatchers.equalTo("[\"" + GROUP_ACCOUNT_NAME + "\"]")));
 
-        verify(groupAccountService).getAllGroupAccounts();
+        verify(groupAccountService).getGroupAccounts();
     }
 
 

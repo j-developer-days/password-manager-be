@@ -13,6 +13,10 @@
 
     <name>${project.artifactId}</name>
 
+    <properties>
+        <com.jdev.common.version>1.0-29.05.2023</com.jdev.common.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,6 +34,12 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdev</groupId>
+            <artifactId>common</artifactId>
+            <version>${com.jdev.common.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

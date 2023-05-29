@@ -63,7 +63,7 @@ class GroupAccountServiceTest {
     void test_getAllGroupAccounts_emptyResult() {
         when(groupAccountRepository.findAll()).thenReturn(List.of());
 
-        List<String> allGroupAccounts = groupAccountService.getAllGroupAccounts();
+        List<String> allGroupAccounts = groupAccountService.getGroupAccounts();
 
         assertEquals(List.of(), allGroupAccounts);
     }
@@ -72,7 +72,7 @@ class GroupAccountServiceTest {
     void test_getAllGroupAccounts_Results() {
         when(groupAccountRepository.findAll()).thenReturn(List.of(GroupAccountEntity.builder().groupName(GROUP_ACCOUNT_NAME).build()));
 
-        List<String> allGroupAccounts = groupAccountService.getAllGroupAccounts();
+        List<String> allGroupAccounts = groupAccountService.getGroupAccounts();
 
         assertEquals(List.of(GROUP_ACCOUNT_NAME), allGroupAccounts);
     }
