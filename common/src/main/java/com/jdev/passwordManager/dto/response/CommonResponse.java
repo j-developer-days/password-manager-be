@@ -1,8 +1,10 @@
-package com.jdev.dto.response;
+package com.jdev.passwordManager.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Data
 public class CommonResponse<T> {
 
@@ -26,9 +28,10 @@ public class CommonResponse<T> {
     }
 
     public enum ErrorType {
-        NOT_EQUAL_PASSWORD;
+        NOT_EQUAL_PASSWORD, NOT_FOUND_ENTITY;
     }
 
+    @NoArgsConstructor
     @AllArgsConstructor
     @Data
     public static class Error {

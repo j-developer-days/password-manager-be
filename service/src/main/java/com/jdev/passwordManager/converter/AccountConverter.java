@@ -1,7 +1,7 @@
 package com.jdev.passwordManager.converter;
 
-import com.jdev.dto.request.AccountRequestDto;
-import com.jdev.dto.response.AccountResponseDto;
+import com.jdev.passwordManager.dto.request.AccountRequestDto;
+import com.jdev.passwordManager.dto.response.AccountResponseDto;
 import com.jdev.passwordManager.entity.AccountEntity;
 import com.jdev.passwordManager.entity.GroupAccountEntity;
 import lombok.AccessLevel;

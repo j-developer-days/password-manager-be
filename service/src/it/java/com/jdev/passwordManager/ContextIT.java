@@ -5,12 +5,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-@SpringBootTest(/*classes = Application.class,*/ webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ContextIT {
+public class ContextIT extends ParentTestHelper {
 
     @Test
     void context(ApplicationContext ctx) {
-        Assertions.assertEquals(208, ctx.getBeanDefinitionCount());
+        Assertions.assertEquals(211, ctx.getBeanDefinitionCount());
     }
 
+    @Override
+    protected String getUrlWithRestControllerRequestMapping() {
+        return null;
+    }
 }

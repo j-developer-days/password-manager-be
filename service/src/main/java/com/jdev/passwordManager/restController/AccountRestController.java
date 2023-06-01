@@ -1,8 +1,8 @@
 package com.jdev.passwordManager.restController;
 
-import com.jdev.dto.request.AccountRequestDto;
-import com.jdev.dto.response.AccountResponseDto;
-import com.jdev.dto.response.CommonResponse;
+import com.jdev.passwordManager.dto.request.AccountRequestDto;
+import com.jdev.passwordManager.dto.response.AccountResponseDto;
+import com.jdev.passwordManager.dto.response.CommonResponse;
 import com.jdev.passwordManager.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

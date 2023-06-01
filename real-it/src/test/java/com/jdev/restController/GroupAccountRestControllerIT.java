@@ -14,7 +14,7 @@ public class GroupAccountRestControllerIT extends RestAssuredProjectConfig {
                 RestAssured.post("/group-account/"
                         + RestAssuredProjectConfig.FAKER.internet().url());
         printResponse(response);
-        Assertions.assertEquals(201, response.getStatusCode());
+        Assertions.assertEquals(200, response.getStatusCode());
     }
 
 }

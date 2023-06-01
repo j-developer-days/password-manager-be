@@ -1,6 +1,6 @@
 package com.jdev.passwordManager.exception;
 
-import com.jdev.dto.response.CommonResponse;
+import com.jdev.passwordManager.dto.response.CommonResponse;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.http.HttpStatus;

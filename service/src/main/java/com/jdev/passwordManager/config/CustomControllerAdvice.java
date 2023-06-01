@@ -1,6 +1,6 @@
 package com.jdev.passwordManager.config;
 
-import com.jdev.dto.response.CommonResponse;
+import com.jdev.passwordManager.dto.response.CommonResponse;
 import com.jdev.passwordManager.exception.PasswordManagerRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

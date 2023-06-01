@@ -1,6 +1,6 @@
-package com.jdev.dto.response;
+package com.jdev.passwordManager.dto.response;
 
-import com.jdev.dto.common.AccountDto;
+import com.jdev.passwordManager.dto.common.AccountDto;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

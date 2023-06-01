@@ -1,9 +1,9 @@
 package com.jdev.passwordManager.service;
 
 import com.jdev.passwordManager.converter.AccountConverter;
-import com.jdev.dto.request.AccountRequestDto;
-import com.jdev.dto.response.AccountResponseDto;
-import com.jdev.dto.response.CommonResponse;
+import com.jdev.passwordManager.dto.request.AccountRequestDto;
+import com.jdev.passwordManager.dto.response.AccountResponseDto;
+import com.jdev.passwordManager.dto.response.CommonResponse;
 import com.jdev.passwordManager.entity.AccountEntity;
 import com.jdev.passwordManager.exception.PasswordManagerRuntimeException;
 import com.jdev.passwordManager.repository.AccountRepository;
