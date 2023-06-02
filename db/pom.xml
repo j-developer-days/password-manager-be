@@ -3,8 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jdev</groupId>
-        <artifactId>password-manager-be-root</artifactId>
-        <version>1.0-25.04.2023</version>
+        <artifactId>jdev_maven_parent</artifactId>
+        <version>3-02.06.2023</version>
+        <relativePath/>
     </parent>
 
     <artifactId>password-manager-be-db</artifactId>

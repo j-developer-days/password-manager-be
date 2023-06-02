@@ -4,12 +4,11 @@
     <parent>
         <groupId>com.jdev</groupId>
         <artifactId>jdev_maven_parent</artifactId>
-        <version>2-12.05.2023</version>
+        <version>3-02.06.2023</version>
         <relativePath/>
     </parent>
 
-    <artifactId>real-it</artifactId>
-    <version>1.0-12.05.2023</version>
+    <artifactId>password-manager-be-real-it</artifactId>
 
     <properties>
         <com.jdev.common.version>1.0-29.05.2023</com.jdev.common.version>
