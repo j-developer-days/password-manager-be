@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS t_group_accounts(
 	group_name VARCHAR(100) NOT NULL,
 
 	CONSTRAINT t_group_accounts__id__pk PRIMARY KEY(id)
-) ${tablespace.add};
+) ${tablespace.specify};
 
 --changeset jdev:2
 --comment: create new table t_accounts
@@ -23,4 +23,4 @@ CREATE TABLE IF NOT EXISTS t_accounts(
 
 	CONSTRAINT t_accounts__id__pk PRIMARY KEY(id),
 	CONSTRAINT t_accounts__group_id__fk FOREIGN KEY(group_id) REFERENCES t_group_accounts(id)
-) ${tablespace.add};
+) ${tablespace.specify};

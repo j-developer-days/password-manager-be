@@ -22,7 +22,7 @@ case "$commandNumber" in
    ;;
    "13") clear && mvn --file ../pom.xml -U -Proot-db clean package && mvn --file ../pom.xml liquibase:status
    ;;
-   "21") clear && mvn --file ../pom.xml -U -Ppassword_manager_db clean package && mvn --file ../pom.xml liquibase:update -Dtablespace.add="TABLESPACE password_manager_ts"
+   "21") clear && mvn --file ../pom.xml -U -Ppassword_manager_db clean package && mvn --file ../pom.xml liquibase:update
    ;;
    "22") clear && mvn --file ../pom.xml -U -Ppassword_manager_db clean package && mvn --file ../pom.xml liquibase:dropAll
    ;;

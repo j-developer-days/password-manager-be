@@ -68,6 +68,7 @@
                 <db.password>753951$^0Ghf</db.password>
                 <db.url>jdbc:postgresql://localhost:5432/${db.name}</db.url>
                 <db.username>pm_db_admin</db.username>
+                <tablespace.specify>TABLESPACE password_manager_ts</tablespace.specify>
             </properties>
         </profile>
 
@@ -78,6 +79,7 @@
                 <db.password>root_12345</db.password>
                 <db.url>jdbc:postgresql://localhost:5433/password_manager_db</db.url>
                 <db.username>root</db.username>
+                <tablespace.specify></tablespace.specify>
             </properties>
         </profile>
 
