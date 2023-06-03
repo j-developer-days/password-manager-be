@@ -1,0 +1,18 @@
+services:
+  postgres_db:
+    image: postgres:15.3
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root_12345
+      POSTGRES_DB: password_manager_db
+
+#  password_manager_be:
+#    image: password_manager_be:latest
+#    restart: always
+#    ports:
+#      - 10101:10101
+#    depends_on:
+#      - postgres_db

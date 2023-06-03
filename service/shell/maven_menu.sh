@@ -19,7 +19,7 @@ else
 fi
 
 case "$commandNumber" in
-   "1") sh maven_clean_install.sh
+   "1") sh -e maven_clean_install.sh
    ;;
    "11")
    clear && mvn --file ../pom.xml -U -Dskip.UT.tests=false clean install &&
